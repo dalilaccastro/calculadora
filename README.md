@@ -10,4 +10,5 @@ Para esse projeto, foram criados:
     - buttonDouble: botão '0' que apresenta 2 vezes o tamanho do button; e
     - buttonTriple: botão 'AC' que apresenta 3 vezes o tamanho do button.
 
+-- Display.js - cria o Display , onde aparecerão os números inseridos pelo usuário.
 
