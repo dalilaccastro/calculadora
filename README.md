@@ -20,3 +20,11 @@ Para esse projeto, foram criados:
 
             - import de Button.js e Display.js;
             - definido estado inicial em initialState como 0 aos cálculos. Será utilizado em state e em clearMemory no export;
+
+            Funções utilizadas:
+            - addDigit: 
+                    - limpa o display, caso seja idêntico a '0', assim, o número será '5' e não '05';
+                    - if checa se já existe '.', caso positivo, não permite a inserção de outro '.';
+                    - acrescenta os números inseridos, para que não se limite a um únido dígito ('1234..');
+                    - if transforma número decimal em Float, armazena newValue e define o values de state novamente;
+
