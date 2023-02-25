@@ -12,3 +12,11 @@ Para esse projeto, foram criados:
 
 -- Display.js - cria o Display , onde aparecerão os números inseridos pelo usuário.
 
+-- App.js   - aplicação de fato das funções da Calculadora, onde o usuário:
+            1- insere os números que ficam na primeira posição, 
+            2- escolhem a operação ('+', '-', '/', '*'), 
+            3- isere o próximo número e finaliza com '=';
+            4- limpa o display em 'AC';
+
+            - import de Button.js e Display.js;
+            - definido estado inicial em initialState como 0 aos cálculos. Será utilizado em state e em clearMemory no export;
