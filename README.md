@@ -30,4 +30,10 @@ Para esse projeto, foram criados:
 
             - clearMemory: 
                     - spread do initialState. Será usado na lógica do render;
-            
+            - setOperation:
+                    - Se current idêntico a '0', seta operation, define current índice 1 do array e limpa o display;
+                    - caso negativo, define equals para idêntico a '=', spread do values e utiliza eval para concatenação de valores, colocando em índice 0;
+                    - values de índice 1: definido '0', seta estado do displayValue com o cálculo do eval, define se não for nulo, usa operation, current (se tiver equals, posição 0, se não posição 1), clearDisplay quando negativo 'equals' e values;
+
+
+   
