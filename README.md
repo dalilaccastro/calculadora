@@ -1,5 +1,9 @@
 Calculadora
 
+    Package.json
+    - "react": "18.2.0",
+    - "react-native": "0.71.3"
+
 Este projeto apresenta uma calculadora criada para fins estudantis baseada no Front-End da Calculadora do iOS.
 
 Para esse projeto, foram criados: 
