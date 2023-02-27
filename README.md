@@ -28,3 +28,6 @@ Para esse projeto, foram criados:
                     - acrescenta os números inseridos, para que não se limite a um únido dígito ('1234..');
                     - if transforma número decimal em Float, armazena newValue e define o values de state novamente;
 
+            - clearMemory: 
+                    - spread do initialState. Será usado na lógica do render;
+            
