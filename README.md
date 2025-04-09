@@ -1,46 +1,123 @@
-Calculadora
+# 📱 Calculadora iOS Clone
 
-    Package.json
-    - "react": "18.2.0",
-    - "react-native": "0.71.3"
+Projeto de uma calculadora funcional desenvolvida com **React Native** e **TypeScript**, inspirada no design da calculadora do iOS. Criada com foco educacional, o projeto visa reforçar conhecimentos em lógica matemática, interface amigável e estruturas condicionais em programação.
 
-Este projeto apresenta uma calculadora criada para fins estudantis baseada no Front-End da Calculadora do iOS.
+---
 
-Para esse projeto, foram criados: 
+## 🚀 Funcionalidades
 
--- Button.js - define a aparência dos botões, sendo eles 
-    - button: botões simples utilizado nos números em geral e '.';
-    - operationButton: botões das operações '+', '-','/','*','=';
-    - buttonDouble: botão '0' que apresenta 2 vezes o tamanho do button; e
-    - buttonTriple: botão 'AC' que apresenta 3 vezes o tamanho do button.
+- Interface responsiva inspirada no layout do iOS  
+- Operações básicas: adição, subtração, multiplicação e divisão  
+- Lógica de substituição de operadores  
+- Limpeza e manipulação de dígitos (AC, ponto decimal, etc.)  
+- Organização do código em componentes reutilizáveis
 
--- Display.js - cria o Display , onde aparecerão os números inseridos pelo usuário.
+---
 
--- App.js   - aplicação de fato das funções da Calculadora, onde o usuário:
-            1- insere os números que ficam na primeira posição, 
-            2- escolhem a operação ('+', '-', '/', '*'), 
-            3- isere o próximo número e finaliza com '=';
-            4- limpa o display em 'AC';
+## 🧠 Estrutura do Projeto
 
-            - import de Button.js e Display.js;
-            - definido estado inicial em initialState como 0 aos cálculos. Será utilizado em state e em clearMemory no export;
+O projeto é composto por componentes reutilizáveis que controlam tanto a **interface** quanto a **lógica matemática** da calculadora:
 
-            Funções utilizadas:
-            - addDigit: 
-                    - limpa o display, caso seja idêntico a '0', assim, o número será '5' e não '05';
-                    - if checa se já existe '.', caso positivo, não permite a inserção de outro '.';
-                    - acrescenta os números inseridos, para que não se limite a um únido dígito ('1234..');
-                    - if transforma número decimal em Float, armazena newValue e define o values de state novamente;
+- `Button`: componente reutilizável para os botões da calculadora  
+- `CalculatorLogic`: funções responsáveis pelas operações matemáticas e controle do estado
 
-            - clearMemory: 
-                    - spread do initialState. Será usado na lógica do render;
-            - setOperation:
-                    - Se current idêntico a '0', seta operation, define current índice 1 do array e limpa o display;
-                    - caso negativo, define equals para idêntico a '=', spread do values e utiliza eval para concatenação de valores, colocando em índice 0;
-                    - values de índice 1: definido '0', seta estado do displayValue com o cálculo do eval, define se não for nulo, usa operation, current (se tiver equals, posição 0, se não posição 1), clearDisplay quando negativo 'equals' e values;
-            - render:
-                    - inserção do Display;
-                    - inserção de cada botão, definindo os labels, se são simples, duplo ou triplo na disposição em tela e definindo qual função utilizada dentre addDigit (para os números e '.'), clearMemory (para AC), e setOperation (para '+', '-', '/', '*' e '=');
-        Por último, em App.js, seguem as estilizações container (flex:1) e e buttons, finalizando a aplicação.
+### 🔢 Exemplo de função
 
-   
+```ts
+function addDigit(digit: string) {
+  if (displayValue === '0') {
+    setDisplayValue(digit);
+  } else {
+    setDisplayValue(displayValue + digit);
+  }
+}
+```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- React Native  
+- TypeScript  
+- Styled Components  
+- Expo  
+
+---
+
+## 📦 Instalação
+
+```bash
+git clone https://github.com/dalilaccastro/calculadora.git
+cd calculadora
+npm install
+npx expo start
+```
+
+---
+
+## 👩‍💻 Autora
+
+Desenvolvido por [@dalilaccastro](https://github.com/dalilaccastro)
+
+---
+
+# 📱 iOS Calculator Clone
+
+A fully functional calculator built with **React Native** and **TypeScript**, inspired by the design of Apple's iOS calculator. This project was created for educational purposes, focusing on logic building, clean UI, and state management in mobile development.
+
+---
+
+## 🚀 Features
+
+- Responsive interface based on the iOS layout  
+- Basic operations: addition, subtraction, multiplication, division  
+- Operator substitution logic  
+- Digit control (AC, decimal point, etc.)  
+- Clean component-based architecture
+
+---
+
+## 🧠 Project Structure
+
+The project is built using modular components to separate logic and UI responsibilities:
+
+- `Button`: reusable component for calculator keys  
+- `CalculatorLogic`: functions responsible for math operations and state updates  
+
+### 🔢 Example Function
+
+```ts
+function addDigit(digit: string) {
+  if (displayValue === '0') {
+    setDisplayValue(digit);
+  } else {
+    setDisplayValue(displayValue + digit);
+  }
+}
+```
+
+---
+
+## 🛠️ Technologies Used
+
+- React Native  
+- TypeScript  
+- Styled Components  
+- Expo  
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/dalilaccastro/calculadora.git
+cd calculadora
+npm install
+npx expo start
+```
+
+---
+
+## 👩‍💻 Author
+
+Developed by [@dalilaccastro](https://github.com/dalilaccastro)
